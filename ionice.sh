@@ -1,0 +1,1 @@
+time ionice -c1 -n0 su -c "dd if=/dev/zero of=test.img bs=512 count=1M oflag=direct" & time ionice -c2 -n7 su -c "dd if=/dev/zero of=test2.img bs=512 count=1M oflag=direct" &
